@@ -7,10 +7,10 @@
  <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
 <!-- Above is the Loader Animation for Page Using NPM loader-->
-
+<mat-toolbar color="primary">Click and Type The Blog Fields </mat-toolbar>
 <mat-card>
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
-    <mat-form-field>
+    <mat-form-field>Title
       <input
         matInput
         type="text"
@@ -21,7 +21,7 @@
         #title="ngModel">
       <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field>Content
       <textarea
         matInput
         rows="4"

@@ -1,0 +1,27 @@
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+
+#image{
+    float: right;
+
+}
+
+::-webkit-input-placeholder { /* Edge */
+    color: red;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+    color: red;
+}
+
+::placeholder {
+    color: red;
+}
+
+#contactForm{
+    display: flex;
+    justify-content: center;
+}
+
+#contactFormP{
+    text-align: center;
+}

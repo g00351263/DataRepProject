@@ -1,3 +1,4 @@
+
 <!-- Below is the Loader Animation for Page Using NPM loader-->
 <ngx-spinner
   bdColor="rgba(51,51,51,0.8)"
@@ -6,4 +7,32 @@
   type="pacman">
  <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
-<!-- Above is the Loader Animation for Page Using NPM loader-->
+<!-- Loader Animation Ends Here-->
+
+
+<mat-toolbar color="primary">Developer Contact Form</mat-toolbar>
+<img src='./assets/profile-pic.jpg' id='image' height="400" width="400">
+
+<p id="contactFormP">Please Fill in Form Below to get in touch</p>
+
+<div id="contactForm">
+<form action="mailto:g00351263@gmit.ie" method="post" enctype="text/plain">
+
+  <!-- name -->
+  <div class="field">
+    <input type="text" name="name" class="input" placeholder="Your Name">
+  </div>
+
+  <!-- email -->
+  <div class="field">
+    <input type="email" name="email" class="input" placeholder="Your Email">
+  </div>
+
+  <!-- message -->
+  <div class="field">
+    <textarea rows="10" cols="50" class="textarea" name="message" placeholder="What's on your mind?"></textarea>
+  </div>
+
+  <button type="submit" class="button is-danger is-large">Submit</button>
+  </form>
+</div>

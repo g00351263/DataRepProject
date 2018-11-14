@@ -9,13 +9,14 @@
 <!-- Above is the Loader Animation for Page Using NPM loader-->
 
 
-<mat-toolbar color="primary">Posts List</mat-toolbar>
+<mat-toolbar color="primary">Blogs </mat-toolbar>
 <mat-accordion multi="true" *ngIf="posts.length > 0">
   <mat-expansion-panel [expanded]="true" *ngFor="let post of posts">
     <mat-expansion-panel-header>
-      {{ post.title }}
+     Title:&nbsp;&nbsp;&nbsp;{{ post.title }}
     </mat-expansion-panel-header>
-    <p>{{ post.content }}</p>
+    <p>Content:<br> 
+    {{ post.content }}</p>
     <mat-action-row>
       <button mat-button [routerLink]="['/edit', post._id]" color="primary">EDIT</button>
       <button mat-button (click)="onDelete(post._id)" color="warn">DELETE</button>
