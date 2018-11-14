@@ -16,10 +16,12 @@ import { MatInputModule,
   MatExpansionModule} from '@angular/material';
 import { PostCreateComponent } from './post-create/post-create.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 const appRoutes: Routes = [
   {
-    path: 'list',
+    path: '',
     component: PostDetailsComponent
   },
   {
@@ -29,6 +31,10 @@ const appRoutes: Routes = [
   {
     path: 'edit/:id',
     component: PostEditComponent
+  },
+  {
+    path: 'contactus',
+    component: ContactusComponent
   }
 ];
 
@@ -38,7 +44,8 @@ const appRoutes: Routes = [
     AppComponent,
     PostDetailsComponent,
     PostCreateComponent,
-    PostEditComponent
+    PostEditComponent,
+    ContactusComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -53,7 +60,8 @@ const appRoutes: Routes = [
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
-  MatMenuModule
+  MatMenuModule,
+  NgxSpinnerModule
   ],
   providers: [PostService],
   bootstrap: [AppComponent]
