@@ -18,6 +18,9 @@ import { PostCreateComponent } from './post-create/post-create.component';
 import { PostEditComponent } from './post-edit/post-edit.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { NewsComponent } from './news/news.component';
 
 const appRoutes: Routes = [
   {
@@ -35,6 +38,18 @@ const appRoutes: Routes = [
   {
     path: 'contactus',
     component: ContactusComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'news',
+    component: NewsComponent
   }
 ];
 
@@ -45,7 +60,10 @@ const appRoutes: Routes = [
     PostDetailsComponent,
     PostCreateComponent,
     PostEditComponent,
-    ContactusComponent
+    ContactusComponent,
+    LoginComponent,
+    RegisterComponent,
+    NewsComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
