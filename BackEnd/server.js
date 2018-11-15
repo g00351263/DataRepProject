@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
-
+let request = require("request")
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb://raja_pk_pk:2525154Abcde@ds239873.mlab.com:39873/rajamangodb';
 mongoose.connect(mongoDB);
@@ -32,6 +32,25 @@ app.post('/name', function(req, res){
     req.body.firstname + " " +
     req.body.lastname);
 })
+
+app.post('/news', function(req, res){
+    res.send("Hello you sent ");
+    request("https://newsapi.org/v2/top-headlines?sources=the-irish-times&apiKey=2a75bd92c42a4a7a922d6bf591e75b0d", function(err,response,body){
+        if(err){
+            console.log(err);
+        }
+        else{
+        
+            let news = JSON.parse(body)
+            console.log(news);
+        }
+    })
+
+})
+
+
+
+
 
 app.get('/', function (req, res) {
    res.send('Hello from Express');

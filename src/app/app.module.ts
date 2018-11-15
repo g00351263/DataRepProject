@@ -22,9 +22,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NewsComponent } from './news/news.component';
 
+
 const appRoutes: Routes = [
   {
-    path: '',
+    path: 'post',
     component: PostDetailsComponent
   },
   {
@@ -63,7 +64,8 @@ const appRoutes: Routes = [
     ContactusComponent,
     LoginComponent,
     RegisterComponent,
-    NewsComponent
+    NewsComponent,
+
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

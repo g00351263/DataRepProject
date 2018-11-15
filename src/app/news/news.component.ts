@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PostService} from '../services/post.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-news',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-
-  constructor() { }
+news: any[] = [];
+  constructor(private postserve: PostService ) { }
 
   ngOnInit() {
-  }
-
+    this.postserve.getPostsDataNews().subscribe(data => {
+      this.news = data.articles;
+      console.log(data);
+  });
+ }
 }

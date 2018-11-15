@@ -25,7 +25,11 @@
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "mongoose": "^5.3.7",
+    "newsapi": "^2.4.0",
     "ngx-spinner": "^6.1.2",
+    "react": "^16.6.3",
+    "react-live-clock": "^3.0.0",
+    "request": "^2.88.0",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },

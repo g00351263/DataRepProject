@@ -1,3 +1,7 @@
-<p>
-  news works!
-</p>
+
+  <div *ngFor="let new of news">
+      <h2>{{new.source.name}}</h2>
+      <h2>{{new.author}}</h2>
+      <h1>{{new.title}}</h1>
+      <p>{{new.description}}</p>
+  </div>
