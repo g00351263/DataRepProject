@@ -7,9 +7,21 @@
  <p style="font-size: 20px; color: white">Loading...</p>
 </ngx-spinner>
 <!-- Above is the Loader Animation for Page Using NPM loader-->
-<mat-toolbar color="primary">Click and Type The Blog Fields </mat-toolbar>
+
+<mat-toolbar>Click and Type The Blog Fields </mat-toolbar>
 <mat-card>
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>Blogger Name
+      <input
+        matInput
+        type="text"
+        name="name"
+        ngModel
+        required
+        minlength="3"
+        #name="ngModel">
+      <mat-error *ngIf="name.invalid">Please enter a Your Name.</mat-error>
+    </mat-form-field>
     <mat-form-field>Title
       <input
         matInput

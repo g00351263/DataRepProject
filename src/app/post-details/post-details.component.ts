@@ -24,6 +24,7 @@ export class PostDetailsComponent implements OnInit {
         /** spinner ends after 5 seconds */
         this.spinner.hide();
     }, 1000);
+    
     this.ps.getPostsData().subscribe(data => {
         this.posts = data;
     });

@@ -37,11 +37,4 @@ export class LoginComponent implements OnInit {
 
     });
   }
-  onEditPost(form: NgForm) {
-    this.service.updatePost(this.post._id, form.value.userName, form.value.password).subscribe(() =>
-    {
-      this.router.navigate(['/list']);
-    });
   }
-
-}

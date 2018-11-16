@@ -49,7 +49,7 @@ const appRoutes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'news',
+    path: '',
     component: NewsComponent
   }
 ];

@@ -24,6 +24,7 @@ export class PostEditComponent implements OnInit {
         /** spinner ends after 5 seconds */
         this.spinner.hide();
     }, 1000);
+    
     console.log(this.route.snapshot.params['id']);
     this.service.getPost(this.route.snapshot.params['id']).subscribe(data =>
     {
@@ -35,7 +36,7 @@ export class PostEditComponent implements OnInit {
     });
   }
   onEditPost(form: NgForm) {
-    this.service.updatePost(this.post._id, form.value.title, form.value.content).subscribe(() =>
+    this.service.updatePost(this.post._id, form.value.name, form.value.title, form.value.content).subscribe(() =>
     {
       this.router.navigate(['/list']);
     });

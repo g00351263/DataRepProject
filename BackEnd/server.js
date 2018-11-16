@@ -4,14 +4,16 @@ var path = require('path');
 var bodyParser = require('body-parser');
 let request = require("request")
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://raja_pk_pk:2525154Abcde@ds239873.mlab.com:39873/rajamangodb';
+var mongoDB = 'mongodb://raja_pk_pk:2525154Abcde@ds053128.mlab.com:53128/rajablogpost';
 mongoose.connect(mongoDB);
 
 var Schema = mongoose.Schema;
 var postSchema = new Schema({
+    name: String,
     title: String,
-    content: String
+    content: String  
 })
+
 var PostModel = mongoose.model('post', postSchema);
 
 
@@ -58,10 +60,12 @@ app.get('/', function (req, res) {
 
 app.post('/api/posts', function(req, res){
     console.log("post successful");
+    console.log(req.body.name);
     console.log(req.body.title);
     console.log(req.body.content);
 
     PostModel.create({
+        name: req.body.name,
         title: req.body.title,
         content: req.body.content
     });
@@ -88,6 +92,7 @@ app.get('/api/posts/:id', function(req, res){
 
 app.put('/api/posts/:id', function(req, res){
     console.log("Update Post" +req.params.id);
+    console.log(req.body.name);
     console.log(req.body.title);
     console.log(req.body.content);
 
